@@ -1,0 +1,26 @@
+<annotation>
+	<folder>train</folder>
+	<filename>apple_26.jpg</filename>
+	<path>C:\tensorflow1\models\research\object_detection\images\train\apple_26.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>350</width>
+		<height>241</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>apple</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>125</xmin>
+			<ymin>58</ymin>
+			<xmax>302</xmax>
+			<ymax>221</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,26 @@
+<annotation>
+	<folder>train</folder>
+	<filename>banana_47.jpg</filename>
+	<path>C:\tensorflow1\models\research\object_detection\images\train\banana_47.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>350</width>
+		<height>263</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>banana</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>3</xmin>
+			<ymin>61</ymin>
+			<xmax>342</xmax>
+			<ymax>263</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,26 @@
+<annotation>
+	<folder>test</folder>
+	<filename>apple_82.jpg</filename>
+	<path>C:\tensorflow1\models\research\object_detection\images\test\apple_82.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>416</width>
+		<height>470</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>apple</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>65</xmin>
+			<ymin>122</ymin>
+			<xmax>365</xmax>
+			<ymax>404</ymax>
+		</bndbox>
+	</object>
+</annotation>
