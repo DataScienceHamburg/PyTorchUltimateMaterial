@@ -8,7 +8,7 @@ You can find the course under this link.
 
 We work with anaconda and use conda environments. You can replicate my environment by running:
 
-conda env create -f environment.yml
+conda env create -f pytorch.yml
 
 ## Environment Installation from scratch
 
