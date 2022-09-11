@@ -61,7 +61,7 @@ class LitLinearRegression(pl.LightningModule):
         X, y = train_batch
 
         # forward pass
-        y_pred = model(X)
+        y_pred = self.forward(X)
 
         # compute loss
         loss = self.loss_fun(y_pred, y)
