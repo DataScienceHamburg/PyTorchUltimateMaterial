@@ -31,6 +31,6 @@ source: https://www.kaggle.com/datasets/andrewmvd/face-mask-detection
 
 python train.py --weights yolov7-e6e.pt --data data/masks.yaml --workers 1 --batch-size 4 --img 416 --cfg cfg/training/yolov7-masks.yaml --name yolov7 --epochs 5
 
-# Detection
+8. Detection
 
 python detect.py --weights runs/train/yolov7/weights/best.pt 	--conf 0.4 --img-size 640 --source ./test/images/maksssksksss824.png
