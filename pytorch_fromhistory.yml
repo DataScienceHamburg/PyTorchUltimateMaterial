@@ -1,0 +1,18 @@
+name: pytorch
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - cudatoolkit=11.6
+  - pytorch
+  - torchaudio
+  - torchvision
+  - ipykernel
+  - seaborn
+  - requests
+  - psutil
+  - python-kaleido
+  - python-graphviz
+  - torchmetrics
+prefix: C:\Users\bertg\.conda\envs\pytorch
