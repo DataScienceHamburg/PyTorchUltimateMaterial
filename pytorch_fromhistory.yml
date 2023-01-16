@@ -5,7 +5,6 @@ channels:
 dependencies:
   - python=3.10
   - pytorch
-  - torchaudio
   - torchvision
   - ipykernel
   - seaborn
@@ -14,4 +13,3 @@ dependencies:
   - python-kaleido
   - python-graphviz
   - torchmetrics
-prefix: C:\Users\bertg\.conda\envs\pytorch
