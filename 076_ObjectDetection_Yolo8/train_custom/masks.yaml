@@ -1,0 +1,8 @@
+train: C:/Projects/PytorchUltimateMaterial/076_ObjectDetection_Yolo8/train_custom/train
+val: C:/Projects/PytorchUltimateMaterial/076_ObjectDetection_Yolo8/train_custom/val
+test: C:/Projects/PytorchUltimateMaterial/076_ObjectDetection_Yolo8/train_custom/test
+
+# Classes
+nc: 3  # number of classes
+names: ['with_mask', 'without_mask', 'mask_weared_incorrect']
+

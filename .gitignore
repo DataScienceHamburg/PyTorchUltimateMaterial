@@ -4,3 +4,7 @@
 images/
 annotations/
 yolov7/
+train/
+val/
+test/
+*.pt
