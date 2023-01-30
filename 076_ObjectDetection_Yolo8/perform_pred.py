@@ -1,10 +1,10 @@
 #%%
 from ultralytics import YOLO
 # %% Load a model
-model = YOLO("masks.pt")  # load our custom trained model
+model = YOLO("yolov8n.pt")  # load our custom trained model
 
 # %%
-result = model("test/images/maksssksksss843.png")
+result = model("test/kiki.jpg")
 # %%
 result
 # %% command line run
