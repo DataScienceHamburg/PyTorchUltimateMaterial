@@ -21,8 +21,6 @@ transform_super = transforms.Compose(
     transforms.ToTensor(),
     transforms.Normalize((0.5, ), (0.5, ))])
 
-
-
 #%% Dataset for train and test
 train_ds = torchvision.datasets.ImageFolder(root='data/train', transform=transform_super)
 test_ds = torchvision.datasets.ImageFolder(root='data/test', transform=transform_super)
