@@ -8,3 +8,4 @@ train/
 val/
 test/
 *.pt
+.vector_cache/
