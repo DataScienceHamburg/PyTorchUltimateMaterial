@@ -60,7 +60,7 @@ class TrigonometryModel(nn.Module):
         x, status = self.lstm(x)    
         x = x[:, -1, :]  # reshape for fc layer; out: BS, hidden
         x = self.fc1(x)
-        x = self.relu(x)
+        # x = self.relu(x)
 
         return x
 
@@ -73,7 +73,7 @@ model = TrigonometryModel()
 #%% Loss and Optimizer
 loss_fun = nn.MSELoss()
 optimizer = torch.optim.Adam(model.parameters(), lr=0.0001)
-NUM_EPOCHS = 20
+NUM_EPOCHS = 40
 
 #%% Train
 for epoch in range(NUM_EPOCHS):
@@ -98,4 +98,28 @@ sns.lineplot(x=x_act, y=y_pred, label = 'Predicted',color='red')
 
 # %% correlation plot
 sns.scatterplot(x=y_act, y=y_pred, label = 'Predicted',color='red', alpha=0.5)
+# %% predict future timeseries
+# solution by Fabian Stohr
+num_future_steps = 3
+ 
+# Initialize a new input tensor with additional future steps
+X_extrapolate = torch.cat((X_test_torch.unsqueeze(2), torch.zeros(X_test_torch.shape[0], num_future_steps, 1)), dim=1)
+
+with torch.no_grad():
+    for i in range(X_test_torch.shape[1], X_test_torch.shape[1] + num_future_steps):
+        # Prediction des nächsten Wertes
+        next_pred = model(X_extrapolate[:, :i, :])
+        
+        # Update des Input Tensors mit dem letzten vorhergesagten Wert
+        X_extrapolate[:, i, :] = next_pred.view(-1, 1)
+ 
+    # Squeeze und numpy umwandeln, für die Visualisierung
+    y_pred_extrapolated = X_extrapolate[:, -num_future_steps:, :].squeeze(2).cpu().numpy()
+ 
+# visualize extrapolation
+sns.lineplot(x= np.linspace(0, len(y_pred_extrapolated.flatten('F'))-1, num=len(y_pred_extrapolated.flatten('F'))), y=y_pred_extrapolated.flatten('F'), label='Extrapolated', color='blue')
+ 
+sns.lineplot(x=x_act, y=y_act, label = 'Actual',color='black')
+ 
+sns.lineplot(x=x_act, y=y_pred, label = 'Predicted',color='red')
 # %%
