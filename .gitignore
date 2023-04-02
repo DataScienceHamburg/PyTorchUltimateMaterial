@@ -10,3 +10,4 @@ test/
 *.pt
 .vector_cache/
 tweets_X.pkl
+ind.pubmed*
