@@ -117,11 +117,7 @@ sns.lineplot(x=range(number_epochs), y=slope)
 
 # %% check the result
 model.eval()
-y_pred = [i[0] for i in model(X).data.numpy()]
+y_pred = [i[0] for i in model(torch.from_numpy(X_np)).data.numpy()]
 y = [i[0] for i in y_true.data.numpy()]
 sns.scatterplot(x=X_list, y=y)
 sns.lineplot(x=X_list, y=y_pred, color='red')
-# %%
-import hiddenlayer as hl
-graph = hl.build_graph(model, X)
-# %%
