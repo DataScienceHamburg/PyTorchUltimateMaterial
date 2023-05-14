@@ -11,3 +11,5 @@ test/
 .vector_cache/
 tweets_X.pkl
 ind.pubmed*
+!350_SemiSupervised/data/train/
+!350_SemiSupervised/data/test/
