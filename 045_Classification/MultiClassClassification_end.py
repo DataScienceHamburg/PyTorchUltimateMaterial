@@ -105,4 +105,6 @@ accuracy_score(y_test, y_test_hat.indices)
 from collections import Counter
 most_common_cnt = Counter(y_test).most_common()[0][1]
 print(f"Naive Classifier: {most_common_cnt / len(y_test) * 100} %")
+# %% save model state dict
+torch.save(model.state_dict(), 'model_iris.pt')
 # %%
