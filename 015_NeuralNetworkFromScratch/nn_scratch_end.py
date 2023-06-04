@@ -76,7 +76,7 @@ class NeuralNetworkFromScratch:
             random_pos = np.random.randint(len(self.X_train))
             
             # forward pass
-            y_train_true = self.X_train[random_pos]
+            y_train_true = self.y_train[random_pos]
             y_train_pred = self.forward(self.X_train[random_pos])
             
             # calc training loss
