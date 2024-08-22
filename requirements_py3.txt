@@ -1,0 +1,9 @@
+torch
+torchvision
+ipykernel
+seaborn
+requests
+psutil
+kaleido
+graphviz
+torchmetrics
