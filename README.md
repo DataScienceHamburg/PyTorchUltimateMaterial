@@ -23,3 +23,12 @@ C:\...> conda activate pytorch
 (pytorch) C:\...> conda install scikit-learn
 (pytorch) C:\...> $ conda install -c conda-forge detecto
 ```
+
+## Environment Installation using venv and without conda
+
+```
+python3 -m venv venv
+source venv/bin/activate
+pip install --upgrade pip
+pip install -r requirements_py3.txt
+```
