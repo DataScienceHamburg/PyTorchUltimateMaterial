@@ -1,0 +1,16 @@
+[tool.ruff]
+line-length = 150
+target-version = "py310"
+# exclude = ["spikes/*"]
+
+[tool.ruff.lint]
+# https://docs.astral.sh/ruff/rules/
+select = ["E", "F", "UP", "B", "I", "C90", "W", "ANN", "ASYNC", "BLE", "A", "COM", "C4", "DTZ", "ISC", "LOG", "PT", "ARG", "PTH", "PD", "RUF"]
+ignore = ["UP015", "ANN002", "ANN003", "ANN401", "PTH123", "PT018", "COM812", "ISC001", "UP017", "PT013"]
+external = ["DC"]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]
+
+[tool.ruff.lint.mccabe]
+max-complexity = 10
